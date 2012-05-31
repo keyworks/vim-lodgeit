@@ -7,7 +7,6 @@ if exists('g:loaded_pastebin')
   finish 
 endif
 let g:loaded_pastebin = 1
-let g:pastebin_resource = 'http://localhost:5000/'
 
 function! s:Initialize(startline, endline)
   if !exists('g:pastebin_resource')
