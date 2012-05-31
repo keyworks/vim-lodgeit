@@ -10,7 +10,7 @@ let loaded_pastebin = 1
 
 let s:paste_command = 'curl'
 let s:paste_method = '-X POST'
-let s:paste_resource = 'http://paste.2ndsiteinc.com'
+let s:paste_resource = ''
 let s:paste_content_type = "-H 'Content-Type: application/json'"
 
 function! s:Paste(startline, endline)
