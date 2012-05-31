@@ -12,6 +12,7 @@ function! s:Initialize(startline, endline)
   if !exists('g:pastebin_resource')
     call <SID>ConfigureURI() 
   endif
+  call <SID>CleanURI()
   call <SID>Paste(a:startline, a:endline)
 endfunction
 
@@ -19,13 +20,15 @@ function! s:ConfigureURI()
   call inputsave()
   let uri = input('Enter pastebin root url: ') 
   call inputrestore()
-
-  if matchstr(uri,'/$') == ''
-    let uri = uri . '/'
-  endif
+  redraw
 
   let g:pastebin_resource = uri
-  redraw
+endfunction
+
+function! s:CleanURI()
+  if matchstr(g:pastebin_resource,'/$') == ''
+    let g:pastebin_resource = g:pastebin_resource . '/'
+  endif
 endfunction
 
 function! s:Paste(startline, endline)
