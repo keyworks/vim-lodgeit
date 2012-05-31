@@ -25,6 +25,7 @@ function! s:ConfigureURI()
   endif
 
   let g:pastebin_resource = uri
+  redraw
 endfunction
 
 function! s:Paste(startline, endline)
