@@ -8,6 +8,7 @@ let pastebin_resource = '<root url>'
 
 Usage
 ----
+Visual selection: 
 ```
 :'<,'>Paste
 ```
