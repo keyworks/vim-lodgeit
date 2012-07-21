@@ -1,9 +1,9 @@
 vim-pastebin
 ============
 
-In ~/.vimrc, specify the root url to your pastebin. Make sure you include http//.
+In ~/.vimrc, specify the root url to your pastebin.
 ```
-let pastebin_resource = '<root url>'
+let pastebin_resource = 'http://yourpastebin.com'
 ```
 
 Usage
