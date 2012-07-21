@@ -3,14 +3,14 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " Avoids the script from loading twice.
-if exists('g:loaded_pastebin')	
-  finish 
+if exists('g:loaded_pastebin')
+  finish
 endif
 let g:loaded_pastebin = 1
 
 function! s:Initialize(startline, endline)
   if !exists('g:pastebin_resource')
-    call <SID>ConfigureURI() 
+    call <SID>ConfigureURI()
   endif
   call <SID>CleanURI()
   call <SID>Paste(a:startline, a:endline)
@@ -18,7 +18,7 @@ endfunction
 
 function! s:ConfigureURI()
   call inputsave()
-  let uri = input('Enter pastebin root url: ') 
+  let uri = input('Enter pastebin root url: ')
   call inputrestore()
   redraw
 
