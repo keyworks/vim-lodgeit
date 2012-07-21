@@ -36,7 +36,7 @@ function! s:Paste(startline, endline)
 
   let command = 'curl -X POST ' . g:pastebin_resource
   let command .= ' -d "language=' . &ft . '"'
-  let command .= ' --data-urlencode "code=' . lines . '"'
+  let command .= ' --data-urlencode "code=' . escape(lines, '"') . '"'
 
   let response = system(command)
   let path = matchstr(response, 'show\/\d\+')
