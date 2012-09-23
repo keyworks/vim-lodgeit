@@ -1,6 +1,8 @@
 vim-pastebin
 ============
 
+Code paster for [LodgeIt pastebin](http://www.pocoo.org/projects/lodgeit/). 
+
 In ~/.vimrc, specify the root url to your pastebin.
 ```
 let pastebin_resource = 'http://yourpastebin.com'
