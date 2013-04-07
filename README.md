@@ -1,4 +1,4 @@
-vim-pastebin
+vim-lodgeit
 ============
 
 Code paster for [LodgeIt pastebin](http://www.pocoo.org/projects/lodgeit/). 
